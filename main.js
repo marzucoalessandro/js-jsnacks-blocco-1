@@ -181,3 +181,87 @@
 // console.log(stringaReverse(parola));
 
 //jsnack 3*************
+
+
+var gruppoZucchine = {
+  zucchina1: {
+    varieta: "faenza",
+    peso: 2,
+    lunghezza: 2
+  },
+  zucchina2: {
+    varieta: "romana",
+    peso: 5,
+    lunghezza: 16
+  },
+  zucchina3: {
+    varieta: "torino",
+    peso: 7,
+    lunghezza: 23
+  },
+  zucchina4: {
+    varieta: "bologna",
+    peso: 1,
+    lunghezza: 12
+  },
+  zucchina5: {
+    varieta: "toscana",
+    peso: 4,
+    lunghezza: 14
+  },
+  zucchina6: {
+    varieta: "umbra",
+    peso: 8,
+    lunghezza: 17
+  },
+  zucchina7: {
+    varieta: "milano",
+    peso: 5,
+    lunghezza: 18
+  },
+  zucchina8: {
+    varieta: "siciliana",
+    peso: 5,
+    lunghezza: 10
+  },
+  zucchina9: {
+    varieta: "calabra",
+    peso: 3,
+    lunghezza: 27
+  },
+  zucchina10: {
+    varieta: "sarda",
+    peso: 8,
+    lunghezza: 20
+  },
+
+};
+// console.log(gruppoZucchine);
+
+var zucchineGrandi = [];
+var zucchinePiccole = [];
+
+for (var key in gruppoZucchine) {
+  if (gruppoZucchine[key].lunghezza > 15) {
+    zucchineGrandi.push(gruppoZucchine[key]);
+    // console.log(zucchineGrandi);
+  } else if (gruppoZucchine[key].lunghezza <= 15) {
+    zucchinePiccole.push(gruppoZucchine[key]);
+    // console.log(zucchinePiccole);
+  }
+};
+
+console.log(zucchineGrandi);
+console.log(zucchinePiccole);
+
+function sommaValori(array) {
+  var somma = 0;
+  for (var i = 0; i < array.length; i++) {
+    somma = array[i].peso + somma;
+  }
+  return somma
+}
+
+
+console.log(sommaValori(zucchineGrandi));
+console.log(sommaValori(zucchinePiccole));
