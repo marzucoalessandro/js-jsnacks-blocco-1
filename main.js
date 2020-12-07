@@ -309,7 +309,7 @@ var array = ["cetrioli", "zucchine", "melanzane", "patate", "broccoli", "lattuga
 var b = Math.floor(Math.random() * (array.length - 1) + 1);
 console.log("la variabile b è un numero grande al massimo quanto la lunghezza del nostro array, in qst caso è " + b);
 
-var a = Math.floor(Math.random() * ((b-1) - 1) + 1);
+var a = Math.floor(Math.random() * ((b-1) - 0));
 console.log("la variabile a è un numero compreso tra 0 e b, in questo caso è " + a);
 
 
