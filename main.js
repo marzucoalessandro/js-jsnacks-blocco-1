@@ -167,7 +167,7 @@
 //
 // }
 //
-// console.log(somma);
+// console.log("il peso totale delle zucchine è di " + somma + " kg");
 
 //jsnack 2********
 
@@ -274,21 +274,56 @@
 // elementi da uno e dall’altro
 // es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 
-var arrayNomi = ["Giorgio", "Marco", "Carlo", "Nicola"];
+// var arrayNomi = ["Giorgio", "Marco", "Carlo", "Nicola"];
+//
+// var arrayNumeri = [1, 2, 3, 4];
+//
+// var arrayMix = [];
+//
+// function mixElement(array1, array2) {
+//
+//   for (var i = 0; i < array1.length; i++) {
+//
+//     arrayMix.push(array1[i], array2[i]);
+//     // arrayMix.push(array2[i]);
+//
+//   } return arrayMix;
+//
+// };
+//
+// console.log(mixElement(arrayNomi, arrayNumeri));
 
-var arrayNumeri = [1, 2, 3, 4];
 
-var arrayMix = [];
+// jsnack 5*********
 
-function mixElement(array1, array2) {
+// Scrivi una funzione che accetti tre argomenti:
+//
+// un array e due numeri (“a” più piccolo di “b” e “b” grande al
+// massimo quanto il numero di elementi dell’array).
+// La funzione ritornerà un nuovo array con i valori che
+//
+// hanno la posizione compresa tra “a” e “b”
 
-  for (var i = 0; i < array1.length; i++) {
+var array = ["cetrioli", "zucchine", "melanzane", "patate", "broccoli", "lattuga", "pomodori", "spinaci"];
 
-    arrayMix.push(array1[i]);
-    arrayMix.push(array2[i]);
+var b = Math.floor(Math.random() * (array.length - 1) + 1);
+console.log("la variabile b è un numero grande al massimo quanto la lunghezza del nostro array, in qst caso è " + b);
 
-  } return arrayMix;
+var a = Math.floor(Math.random() * ((b-1) - 1) + 1);
+console.log("la variabile a è un numero compreso tra 0 e b, in questo caso è " + a);
 
-};
 
-console.log(mixElement(arrayNomi, arrayNumeri));
+
+
+
+function including(array, a, b) {
+
+  var newArray = [];
+
+  for (var i = a; i <= b; i++) {
+    newArray.push(array[i]);
+  }
+  return newArray;
+}
+
+console.log(including(array, a, b));
